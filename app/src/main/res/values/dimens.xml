@@ -4,10 +4,13 @@
     <dimen name="toolbarAlto">30dp</dimen>
     
     <dimen name="cardCornerRadius">4dp</dimen>
-    <dimen name="cardElevation">0dp</dimen>
+    <dimen name="cardElevation">5dp</dimen>
     
     <dimen name="altoImageViewHome">150dp</dimen>
     <dimen name="separadorViewHome">1dp</dimen>
+    <dimen name="separadorMarginTopViewHome">10dp</dimen>
     <dimen name="tamanioTituloHome">20sp</dimen>
     <dimen name="marginHomeSubTitulo">10dp</dimen>
+    <dimen name="tamanioSubtituloHome">15sp</dimen>
+    <dimen name="marginCardViewHome">15dp</dimen>
 </resources>

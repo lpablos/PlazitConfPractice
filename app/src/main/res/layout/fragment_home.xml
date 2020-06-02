@@ -17,7 +17,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="@dimen/cardCornerRadius"
-                app:cardElevation="@dimen/cardElevation">
+                app:cardElevation="@dimen/cardElevation"
+                android:layout_margin="@dimen/marginCardViewHome">
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -37,6 +38,19 @@
                         android:textStyle="bold"
                         android:textSize="@dimen/tamanioTituloHome"
                         android:textColor="@color/colorPrimaryDark"
+                        android:layout_margin="@dimen/marginHomeSubTitulo"/>
+                    <view
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/separadorViewHome"
+                        android:layout_marginTop="@dimen/separadorMarginTopViewHome"
+                        android:background="@color/colorPrimary"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/inicio_frag_tv_que_es_resp"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/tamanioSubtituloHome"
+                        android:textColor="@color/colorPrimary"
                         android:layout_margin="@dimen/marginHomeSubTitulo"/>
 
 
