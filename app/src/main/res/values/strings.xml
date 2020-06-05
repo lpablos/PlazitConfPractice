@@ -16,4 +16,7 @@
     <!-- schedule info -->
     <string name="itemScheduleHour">10:00</string>
     <string name="itemScheduleAMPM">P.M.</string>
+    <string name="scheduleConferenceName">Nombre de la conferencia</string>
+    <string name="scheduleConferenceSpeaker">Nombre conferencista</string>
+    <string name="scheduleTag">Etiqueta</string>
 </resources>

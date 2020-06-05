@@ -37,7 +37,36 @@
             android:layout_width="0dp"
             android:layout_weight="3"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/speaceItemHourText">
+
+            <TextView
+                android:id="@+id/ScheduleConferenceName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/scheduleConferenceName"
+                android:textSize="@dimen/scheduleConferenceName"
+                android:textColor="@color/colorPrimaryDark"
+                android:ellipsize="end"
+                android:lines="1"/>
+            <TextView
+                android:id="@+id/ScheduleConferenceSpeaker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/scheduleConferenceSpeaker"
+                android:text="@string/scheduleConferenceSpeaker"
+                android:textColor="@color/colorPrimary"
+                android:ellipsize="end"
+                android:lines="1"/>
+            <TextView
+                android:id="@+id/ScheduleTag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/scheduleTag"
+                android:textSize="@dimen/scheduleTag"
+                android:textColor="@color/colorWhite"
+                android:ellipsize="end"
+                android:lines="1"/>
         </LinearLayout>
 
     </LinearLayout>
