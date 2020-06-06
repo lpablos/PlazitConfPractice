@@ -13,11 +13,16 @@
     <dimen name="marginHomeSubTitulo">10dp</dimen>
     <dimen name="tamanioSubtituloHome">15sp</dimen>
     <dimen name="marginCardViewHome">15dp</dimen>
-    
+
+    <!-- schedule info -->
     <dimen name="speaceItemHourText">10dp</dimen>
     <dimen name="itemScheduleTitle">30sp</dimen>
     <dimen name="itemScheduleSubtitle">20sp</dimen>
     <dimen name="scheduleConferenceName">20sp</dimen>
     <dimen name="scheduleConferenceSpeaker">15sp</dimen>
     <dimen name="scheduleTag">15sp</dimen>
+
+    <!-- schedule detail -->
+    <dimen name="relativeHeigth">200dp</dimen>
+    <dimen name="titleScheduleDetail">30sp</dimen>
 </resources>

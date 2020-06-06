@@ -19,4 +19,9 @@
     <string name="scheduleConferenceName">Nombre de la conferencia</string>
     <string name="scheduleConferenceSpeaker">Nombre conferencista</string>
     <string name="scheduleTag">Etiqueta</string>
+
+
+    <!-- schedule detail -->
+    <string name="titleScheduleDetail">Titulo de la conferencia</string>
+
 </resources>
