@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1019755167639",
+    "firebase_url": "https://plazitconfapp-70a56.firebaseio.com",
+    "project_id": "plazitconfapp-70a56",
+    "storage_bucket": "plazitconfapp-70a56.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1019755167639:android:5bd216079d6c89b189ced2",
+        "android_client_info": {
+          "package_name": "com.example.plazitconfpractice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1019755167639-0cdii5hdfsv8dofr06iuo9lr5g3fhq53.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.plazitconfpractice",
+            "certificate_hash": "5b74ab0d3f28749246bed12802b36d03e662ad7f"
+          }
+        },
+        {
+          "client_id": "1019755167639-n5dfjopr8j34bq84ub6o3ojep8hsr683.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZn7y5xtp3q4d7rKiMv--YVPJwwgIKiJ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1019755167639-n5dfjopr8j34bq84ub6o3ojep8hsr683.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

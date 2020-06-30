@@ -98,7 +98,7 @@
                         android:textStyle="bold"
                         android:textSize="@dimen/tamanioSubtituloHome"
                         android:textColor="@color/colorPrimary"
-                        android:layout_margin="@dimen/inicio_frag_tv_por_que_resp"/>
+                        android:layout_margin="10px"/>
 
 
                 </LinearLayout>
