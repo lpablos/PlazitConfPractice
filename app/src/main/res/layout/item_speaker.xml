@@ -12,6 +12,7 @@
         android:orientation="vertical"
         android:gravity="center">
         <ImageView
+            android:id="@+id/ivItemSpeakerImage"
             android:layout_width="wrap_content"
             android:layout_height="@dimen/altoImageViewHome"
             android:src="@mipmap/ic_launcher"
@@ -19,6 +20,7 @@
             android:scaleType="centerInside"/>
 
         <TextView
+            android:id="@+id/tvItemSpeakerName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nombre expositor"
@@ -28,6 +30,7 @@
             android:textColor="@color/colorPrimaryDark"
             android:layout_margin="@dimen/marginHomeSubTitulo"/>
         <TextView
+            android:id="@+id/tvItemSpeakerWork"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Trabajo expositor"

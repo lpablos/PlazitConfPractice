@@ -7,13 +7,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <Toolbar
-            android:id="@+id/tollbarMain"
+            android:id="@+id/toolbarMain"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <ImageView
-                android:src="@drawable/logo_platzi_conf"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/toolbarAlto"/>
+                android:layout_height="30dp"
+                android:src="@drawable/logo_platzi_conf"/>
         </Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
     <RelativeLayout
@@ -22,11 +22,12 @@
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
         <fragment
             android:id="@+id/fragContent"
+            android:name="androidx.navigation.fragment.NavHostFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_above="@id/btn_Menu"
             app:navGraph="@navigation/nav_graph"
             app:defaultNavHost="true"/>
+
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/btn_Menu"
             android:layout_width="match_parent"

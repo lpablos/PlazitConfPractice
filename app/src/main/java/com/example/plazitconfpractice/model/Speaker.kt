@@ -2,7 +2,10 @@ package com.example.plazitconfpractice.model
 
 class Speaker {
     var name = ""
-    var jobTitle = ""
+    var jobtitle = ""
     var workplace = ""
-    var blography = ""
+    var biography = ""
+    var twitter = ""
+    var image = ""
+    var category = 0
 }

@@ -20,7 +20,8 @@
                 android:text="@string/itemScheduleHour"
                 android:gravity="right|bottom"
                 android:textSize="@dimen/itemScheduleTitle"
-                android:textColor="@color/colorAccent"/>
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"/>
             <TextView
                 android:id="@+id/itemScheduleAMPM"
                 android:layout_width="match_parent"
@@ -59,7 +60,7 @@
                 android:ellipsize="end"
                 android:lines="1"/>
             <TextView
-                android:id="@+id/ScheduleTag"
+                android:id="@+id/tvItemScheduleTag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/scheduleTag"
