@@ -8,7 +8,9 @@ import com.google.firebase.firestore.FirebaseFirestoreSettings
 const val CONFERENCE_COLLECTION_NAME ="conferences"
 const val SPEAKER_COLLECTION_NAME = "speaker"
 class FirestoreService {
+    //coneccion directa a firebase
     val firebaseFirestore = FirebaseFirestore.getInstance()
+    // configuracion de persistencia de datos
     val settings = FirebaseFirestoreSettings.Builder().setPersistenceEnabled(true).build()
 
     init {
