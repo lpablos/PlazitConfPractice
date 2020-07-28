@@ -1,4 +1,4 @@
-package com.example.plazitconfpractice.ui.activities
+package com.example.plazitconfpractice.view.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

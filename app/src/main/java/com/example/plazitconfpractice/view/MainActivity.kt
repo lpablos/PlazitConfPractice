@@ -1,13 +1,8 @@
-package com.example.plazitconfpractice
+package com.example.plazitconfpractice.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.plazitconfpractice.model.Conference
-import com.example.plazitconfpractice.model.Speaker
-import com.google.firebase.firestore.FirebaseFirestore
-import org.json.JSONArray
-import org.json.JSONObject
-import java.util.*
+import com.example.plazitconfpractice.R
 
 class MainActivity : AppCompatActivity() {
 
