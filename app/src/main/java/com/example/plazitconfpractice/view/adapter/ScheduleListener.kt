@@ -1,6 +1,7 @@
 package com.example.plazitconfpractice.view.adapter
 
-import android.telecom.Conference
+
+import com.example.plazitconfpractice.model.Conference
 import java.text.FieldPosition
 
 interface ScheduleListener {

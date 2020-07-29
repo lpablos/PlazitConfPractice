@@ -12,7 +12,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
-class ScheduleAdapter (scheduleListener: ScheduleAdapter) : RecyclerView.Adapter<ScheduleAdapter.ViewHolder>(){
+class ScheduleAdapter (val scheduleListener: ScheduleListener) : RecyclerView.Adapter<ScheduleAdapter.ViewHolder>(){
     var listConference = ArrayList<Conference>()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ScheduleAdapter.ViewHolder {
         // Indicamos cual es el archivo que vamos a usar para este adaptador
@@ -39,6 +39,11 @@ class ScheduleAdapter (scheduleListener: ScheduleAdapter) : RecyclerView.Adapter
 
         holder.tvConferenceHour.text = hourFormat
         holder.tvConferenceAMPM.text = simpleDateformatAMPM.format(conferencia.datetime).toUpperCase()
+
+        // Aqui se maneja el evento que escucha el click haciendo uso de la interface
+        holder.itemView.setOnClickListener {
+            scheduleListener.onConferenceClicked(conferencia, position)
+        }
     }
 
     fun updateData (data: List<Conference>){
