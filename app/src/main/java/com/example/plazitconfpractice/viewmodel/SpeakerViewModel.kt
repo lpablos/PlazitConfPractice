@@ -1,13 +1,14 @@
 package com.example.plazitconfpractice.viewmodel
 
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.example.plazitconfpractice.model.Speaker
 import com.example.plazitconfpractice.network.Callback
 import com.example.plazitconfpractice.network.FirestoreService
 import java.lang.Exception
 import java.util.*
 
-class SpeakerViewModel {
+class SpeakerViewModel : ViewModel() {
     val fireStoreService = FirestoreService()
     var listSpeaker : MutableLiveData<List<Speaker>> = MutableLiveData()
     var isLoading  = MutableLiveData<Boolean>()
