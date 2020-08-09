@@ -2,13 +2,19 @@ package com.example.plazitconfpractice.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.Navigation
+import androidx.navigation.ui.NavigationUI
 import com.example.plazitconfpractice.R
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        setActionBar(findViewById(R.id.toolbarMain))
+        configNav()
 
         /*
         val jsonArr = JSONArray("[\n" +
@@ -320,5 +326,12 @@ class MainActivity : AppCompatActivity() {
 
             firebaseFirestore.collection("conferences").document().set(conference)
         }*/
+    }
+
+    fun configNav(){
+        //1.- Definir la navegacion
+        // btn_Menu es la navegacion con los botones de abajo
+        // fragContent es la seccion del layout de este activitie
+        NavigationUI.setupWithNavController(btn_Menu, Navigation.findNavController(this, R.id.fragContent))
     }
 }
