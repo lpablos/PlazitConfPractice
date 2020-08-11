@@ -9,6 +9,7 @@ import android.widget.Adapter
 import android.widget.LinearLayout
 import androidx.core.os.bundleOf
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
@@ -57,9 +58,12 @@ class SpeakersFragment : Fragment(), SpeakerListener{
 
     fun observeViewModel(){
         // 1.1.- Llamada del ViewModel y al listado del mismo
-        viewModel.listSpeaker.observe(this, Observer<List<Speaker>>{ speaker->
+        viewModel.listSpeaker.observe(this, Observer<List<Speaker>>{ speakers->
             // 1.2.- Llamada del adaptador para cargar los datos
-            speakerAdapter.updateData(speaker)
+            speakers.let {
+                speakerAdapter.updateData(speakers)
+            }
+
         })
         // 2.1 Llamada para quitar el load al terminar la carga de datos
         viewModel.isLoading.observe(this,Observer<Boolean>{

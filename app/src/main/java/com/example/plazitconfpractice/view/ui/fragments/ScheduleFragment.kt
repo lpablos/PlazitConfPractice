@@ -36,7 +36,6 @@ class ScheduleFragment : Fragment(), ScheduleListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         viewModel = ViewModelProviders.of(this).get(ScheduleViewModel::class.java)
         viewModel.refresh()
         scheduleAdapter = ScheduleAdapter(this)
@@ -52,22 +51,20 @@ class ScheduleFragment : Fragment(), ScheduleListener {
         // es la conexxion
         viewModel.listSchedule.observe(this, Observer<List<Conference>>{schedule->
             // adaptador del recicle view
-            scheduleAdapter.updateData(schedule)
-
+            schedule.let {
+                scheduleAdapter.updateData(schedule)
+            }
         })
-
         // Trabajando con mostrar y ocultar el loading que se tiene
         viewModel.isLoading.observe(this, Observer<Boolean>{
             if(it != null)
                 rlBaseSchedule.visibility = View.INVISIBLE
         })
-
-
     }
     // Evento del click
     override fun onConferenceClicked(conference: Conference, position: Int) {
         //envio de objecto por medio de un bundle al click se enviara on objecto de conferencia
-        val bundle = bundleOf("conferencia" to conference)
+        val bundle = bundleOf("conference" to conference)
         // llamamos la navegacion, este hace referencia a las rutas de la navegacion en la carpeta de navigation
         findNavController().navigate(R.id.scheduleDetailFragmentDialog, bundle)
     }

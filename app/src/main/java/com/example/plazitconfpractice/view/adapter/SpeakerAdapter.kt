@@ -25,7 +25,7 @@ class SpeakerAdapter(val speakerListener: SpeakerListener): RecyclerView.Adapter
     override fun onBindViewHolder(holder: SpeakerAdapter.ViewHolder, position: Int) {
         val speaker = listSpeakers[position] as Speaker
         holder.tvSpeakerNombre.text = speaker.name
-        holder.tvSpeakerTrabajo.text = speaker.jobtitle
+        holder.tvSpeakerWork.text = speaker.workplace
 
         // Aqui la ponemos  Glide para usar
         Glide.with(holder.itemView.context)
@@ -46,7 +46,7 @@ class SpeakerAdapter(val speakerListener: SpeakerListener): RecyclerView.Adapter
 
     class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView){
         val tvSpeakerNombre = itemView.findViewById<TextView>(R.id.tvItemSpeakerName)
-        val tvSpeakerTrabajo = itemView.findViewById<TextView>(R.id.tvItemSpeakerWork)
+        val tvSpeakerWork = itemView.findViewById<TextView>(R.id.tvItemSpeakerWork)
         val tvSpeakerImagen = itemView.findViewById<ImageView>(R.id.ivItemSpeakerImage)
 
     }

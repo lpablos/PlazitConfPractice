@@ -1,9 +1,10 @@
 package com.example.plazitconfpractice.model
 
+import java.io.Serializable
 import java.time.chrono.ChronoLocalDateTime
 import java.util.*
 
-class Conference{
+class Conference : Serializable{
     lateinit var title: String
     lateinit var description: String
     lateinit var tag: String
