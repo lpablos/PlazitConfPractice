@@ -1,15 +1,24 @@
 package com.example.plazitconfpractice.view.ui.fragments
 
+import android.graphics.Bitmap
+import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 
 import com.example.plazitconfpractice.R
+import com.example.plazitconfpractice.model.Ubication
+import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
+import com.google.android.gms.maps.model.BitmapDescriptorFactory
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
+
 
 /**
  * A simple [Fragment] subclass.
@@ -27,11 +36,29 @@ class UbicationFragment : Fragment(), OnMapReadyCallback {
         mapFragment.getMapAsync(this)
     }
 
-    override fun onMapReady(p0: GoogleMap?) {
-        //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-        /*val UPV = LatLng(39.481106, -0.340987) //Nos ubicamos en la UPV
-        googleMap.addMarker(MarkerOptions().position(UPV).title("Marker UPV"))
-        googleMap.moveCamera(CameraUpdateFactory.newLatLng(UPV))*/
+    override fun onMapReady(googleMap: GoogleMap?) {
+        // 1.- Agregar el modelo
+        val ubication = Ubication()
+        // 2.- Agregar la posicion del mapa
+        val zoom = 16f
+        val centerMap = LatLng(ubication.latitude, ubication.longitude)
+        googleMap?.animateCamera(CameraUpdateFactory.newLatLngZoom(centerMap,zoom))
+
+        // 3.- Agregar el marcado dentro del mapa
+        val centerMark = LatLng(ubication.latitude, ubication.longitude)
+        val markerOptions = MarkerOptions()
+        markerOptions.position(centerMark)
+        markerOptions.title("Platzi Conf 2019")
+        // 3.x Agregar un pign personalizado
+        // 3.x.1 Conversion de la imagen para ser utilizada
+        val bitmapDraw = context?.applicationContext?.let { ContextCompat.getDrawable(it, R.drawable.logo_platzi) } as BitmapDrawable
+        // 3.x.2 Agregar dimension personalizadas para ser mostrada
+        val smallMarker = Bitmap.createScaledBitmap(bitmapDraw.bitmap, 150, 150, false)
+        // 3.x.3 Se genera el icono
+        markerOptions.icon(BitmapDescriptorFactory.fromBitmap(smallMarker))
+        // 3.x.4 se añade al mapa
+        googleMap?.addMarker(markerOptions)
+
     }
 
 }
