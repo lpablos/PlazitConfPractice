@@ -3,11 +3,13 @@ package com.example.plazitconfpractice.view.ui.fragments
 import android.graphics.Bitmap
 import android.graphics.drawable.BitmapDrawable
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.navigation.fragment.findNavController
 
 import com.example.plazitconfpractice.R
 import com.example.plazitconfpractice.model.Ubication
@@ -15,15 +17,13 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.BitmapDescriptorFactory
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
+import com.google.android.gms.maps.model.*
 
 
 /**
  * A simple [Fragment] subclass.
  */
-class UbicationFragment : Fragment(), OnMapReadyCallback {
+class UbicationFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
@@ -58,7 +58,17 @@ class UbicationFragment : Fragment(), OnMapReadyCallback {
         markerOptions.icon(BitmapDescriptorFactory.fromBitmap(smallMarker))
         // 3.x.4 se añade al mapa
         googleMap?.addMarker(markerOptions)
+        googleMap?.setOnMarkerClickListener(this)
+        googleMap?.setMapStyle(MapStyleOptions.loadRawResourceStyle(context,R.raw.google_style))
+    }
+
+    override fun onMarkerClick(p0: Marker?): Boolean {
+        // 1.- Se define a donde va a ir con el id de navegacion
+        //findNavController().navigate(R.id.ubicationDetailFragmentDialog)
+        findNavController().navigate(R.id.ubicationDetailFragmentDialog)
+        return true
 
     }
+
 
 }
